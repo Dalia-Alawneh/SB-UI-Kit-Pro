@@ -1,0 +1,354 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+@font-face{
+    src: url(../Metropolis\ Font\ family/Metropolis-Medium.otf);
+    font-family: metro;
+}
+body{
+    font-family:metro;
+}
+.container{
+    margin: auto;
+    width: 80%;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo{
+    width:20%;
+    text-transform:uppercase;
+}
+nav .logo a{
+    font-size:18px;
+    font-weight: 700;
+    
+}
+
+.top{
+    height: 60px;
+    background-color: #0061f2;
+    
+}
+.top .btn{
+    color: #0061f2;
+    font-weight: 600;
+    background-color:#fff;
+    margin-top: 10px;
+    padding: 10px 30px;
+}
+.top .btn:hover{
+    color: #fff;
+}
+.top-desc{
+    color: #fff;
+    margin-top: 10px;
+}
+@media screen and (max-width: 600px) {
+    .top .top-desc{
+        display: none;
+    }
+}
+nav{
+    padding: 25px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+}
+
+ul{
+    list-style: none;
+}
+.btn {
+    background-color: #0061f2;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border: 1px solid #0061f2;
+    transition: 0.5s;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background-color: #0052ce;
+    border-color: #0052ce;
+}
+nav .list-item .item{
+    color: rgba(0,0,0,.55);
+}
+
+nav .list-item .item  a{
+    text-decoration: none;
+    font-weight: 500;
+    color: rgba(0,0,0,.55);
+}
+nav .logo a{
+    text-decoration: none;
+    color: #0061f2;
+    width: 40%;
+    font-size: 22px;
+}
+
+.small{
+    text-transform: lowercase;
+}
+nav .list-item{
+    display: flex;
+    width: 60%;
+    /* align-content: flex-end; */
+    justify-content: flex-end;
+    align-items: center;;
+    
+}
+nav .list-item .item{
+    margin-right: 30px;
+    font-size: 16px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+nav .fa-chevron-right {
+    margin-left: 10px;
+    font-size:13px;
+    transition-duration: 1s; /**منحطها هون عشان لما اشيل الماوس يضل في ترانزشن بطيئة ما يرجع بسرعة **/
+    /*transition-property: ;*/
+}
+
+nav .list-item .item :hover i{
+    transform: translateX(-10px);
+}
+
+/*position لما يكون عندي اشي ثابت ولما دحيب اشي بالتص ولما دجيب صورة فوق صورة او دروب داون
+*/
+
+nav .list-item .item .drop-down{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 90px;
+    padding: 10px;
+    top: 80px;
+    /*display: ;
+    visibility: ;
+    opacity: ;*/ /*لاخفاء العناصر  لما في ترانزشن بستخدم اوباسيتي*/
+    opacity:0;
+    transition: 0.5s;
+    box-shadow: -10px 0 3px #e8e2e2;
+}
+nav .list-item .item:hover .drop-down{
+    top:20px;
+    opacity: 1;
+}
+@media screen and (max-width: 600px) {
+    .container{
+        width: 90%;
+
+    }
+    nav .list-item .item{
+        margin-right: 10px;}
+    nav .fa-chevron-right{
+        margin-left: 0px;
+        font-size:10px;
+    }
+    nav .logo a{
+        font-size: 15px;
+    }
+    
+}
+
+
+.img{
+    width: 50%;
+    height: auto;
+    animation: imgRight 1s;
+}
+
+@keyframes imgRight{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+header .row{
+    margin-top: 25px;
+}
+header .content{
+    width: 50%;
+    animation: contentleft 1s;
+}
+@media screen and (max-width: 600px){
+    .img{
+        display: none;
+    }
+    header .content{
+        width: 100%;
+    }
+}
+header .content h1{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+header .content p{
+    font-size: 15px;
+    line-height: 1.5;
+}
+header .content form{
+    margin: 10px 0;
+}
+header .content input:nth-child(1){
+    width: 70%;
+    padding: 12px;
+    background-color: #eef2f8;
+    border-color: #eef2f8;
+    border: 0;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+@keyframes contentleft{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.feature{
+    margin-top: 40px;
+    background-color: #f2f6fc;
+    position: relative;
+    padding: 186px 0 100px 0px;
+    z-index: 0;
+}
+.feature .box{
+    text-align: center;
+    
+    width: 30%;
+}
+.feature .box .icon{
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    justify-content: center;
+    font-size: 25px;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0061f2, rgba(105,0,199,.8));
+}
+.feature .box .box-header{
+    margin: 18px 0;
+    color: rgba(0,0,0,.65);
+}
+.feature .box .box-description{
+    line-height: 1.3;
+    color: rgba(0,0,0,.55);
+}
+.feature:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+}
+.capital{
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 600px){
+    .feature .row{
+        display: block;
+    }
+    .feature .box{
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+
+
+footer{
+    background-color: rgba(0,0,0,.8);
+    position: relative;
+    padding: 150px 0 140px;
+    color: #ffffff99;
+}
+footer::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color:#f2f6fc;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+}
+.footer-first .row{
+    align-items: flex-start;
+}
+.footer-first .footer-item p{
+    margin: 10px 0;
+}
+footer .footer-first .footer-item .footer-icon{
+    color: #ffffff99;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: 1.5s;
+    display: inline-block;
+}
+footer .footer-first .footer-item .footer-icon:hover{
+    transform: rotateY(180deg);
+}
+footer .footer-first ul li .link-footer{
+    color: #ffffff99;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: 1.5;
+    font-weight: 400;
+    display: inline-block;
+    transition: 1s;
+}
+.footer-first ul li:hover .link-footer{
+    margin-left:5px
+}
+.footer-first{
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+}
+.footer-second{
+    margin-top: 15px
+}
+.link-second{
+    text-decoration: none;
+    color: #ffffff99;
+}
+
+@media screen and (max-width: 600px){
+    .footer-first .row{
+        text-align: center;
+        display: block;
+    }
+    .footer-item{
+        width: 100%;
+        margin: 20px 0;
+    }
+    .footer-second .row{
+        display: block;
+        text-align: center;
+    }
+}
